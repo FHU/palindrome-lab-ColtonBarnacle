@@ -1,15 +1,24 @@
-def palindrome(word_one):
-    if word_one.isspace():
-        return 'False'
-    elif word_one[0]==word_one[-1] and word_one[1]==word_one[-2] and word_one[2]==word_one[-3]:
-        return 'True '
+def is_palindrome(text):
+    # Removing white spaces and converting to lowercase
+    text = text.replace(" ", "").lower()
+    
+    # Checking if the text is empty
+    if not text:
+        return False
+    
+    # Checking if the text is a palindrome
+    return text == text[::-1]
+
+def main():
+    # Getting input from the user
+    user_input = input("Enter a text: ")
+    
+    # Checking if the input is a palindrome
+    if is_palindrome(user_input):
+        print('True')
     else:
-        return 'False'
-        
+        print('False')
 
-#YOUR CODE GOES HERE
-#run tests LR
-word_one = input()
-word_one = word_one.replace(" ", "")
+if __name__ == "__main__":
+    main()
 
-print(palindrome(word_one))
