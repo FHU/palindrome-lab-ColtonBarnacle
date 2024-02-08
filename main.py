@@ -8,6 +8,7 @@ def palindrome(word_one):
         
 
 #YOUR CODE GOES HERE
+#run tests LR
 word_one = input()
 word_one = word_one.replace(" ", "")
 
